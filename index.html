@@ -26,7 +26,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css" integrity="sha512-UO+dUiFTr6cCaPZKCzXEGhYsuK8DkGAS5iThyMUrtHsg+INCFyRM3GiqJ4rjuvfEyn81XGjpfmjSwwR1dAjAsw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css" integrity="sha512-jRxwiuoe3nt8lMSnOzNEuQ7ckDrLl31dwVYFWS6jklXQ6Nzl7b05rrWF9gjSxgOow5nFerdoN6CBB4gY5m5nDw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+      <script type="text/javascript" src="./js/jquery.min.1.7.js"></script>
+      <script type="text/javascript" src="./js/modernizr.2.5.3.min.js"></script>
    </head>
    <body>
       <!-- partial:index.partial.html -->
@@ -69,19 +70,57 @@
 
       <div class="remodal" data-remodal-id="modal">
   <button data-remodal-action="close" class="remodal-close"></button>
-  <h1>Remodal</h1>
-  <p>
-    Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
-  </p>
-  <br>
-  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+  <div class="flipbook">
+		    <div style="background-image:url(pages/1.jpg)"></div>
+			<div style="background-image:url(pages/2.jpg)"></div>
+		</div>
 </div>
       <!-- partial -->
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
       <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script  src="./js/script.js"></script>
+      <script type="text/javascript">
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+
+			// Enable gradients
+
+			gradients: true,
+
+			// Auto center this flipbook
+
+			autoCenter: true
+
+	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['js/turn.js'],
+	nope: ['js/turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});
+
+</script>
    </body>
 
 
