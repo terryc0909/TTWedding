@@ -2,7 +2,7 @@
 <html lang="en" >
   <head>
     <meta name="viewport" content="width = 1050, user-scalable = no" />
-
+    <link type="text/css" rel="stylesheet" media="screen" href="css/jquery-sakura.min.css" />
     <script type="text/javascript" src="./js/jquery.min.1.7.js"></script>
     <script type="text/javascript" src="./js/modernizr.2.5.3.min.js"></script>
   </head>
@@ -10,7 +10,6 @@
 <body>
 
 <div class="flipbook-viewport">
-    <div class="sakura-falling"></div>
 	<div class="container">
 		<div class="flipbook">
 		    <div style="background-image:url(pages/1.jpg)"></div>
@@ -62,10 +61,9 @@ yepnope({
 });
 
 
-(function ($) {
-    "use strict";
-      $('.sakura-falling').sakura();
-})(jQuery);
+$(function() {
+        $('body').sakura();
+    });
 
 </script>
 
