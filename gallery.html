@@ -5,10 +5,39 @@
     <link type="text/css" rel="stylesheet" media="screen" href="css/jquery-sakura.min.css" />
     <script type="text/javascript" src="./js/jquery.min.1.7.js"></script>
     <script type="text/javascript" src="./js/modernizr.2.5.3.min.js"></script>
+    <style>
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width:900px) {
+      img {
+        max-width: 30%;
+      }
+    }
+
+    .top-right-decoration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+    }
+
+    .top-left-decoration {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+
+    </style>
   </head>
 
 <body>
 
+  <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
+  <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration">
 <div class="flipbook-viewport">
 	<div class="container">
 		<div class="flipbook">
