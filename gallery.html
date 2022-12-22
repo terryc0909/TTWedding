@@ -8,7 +8,7 @@
   </head>
 
 <body>
-
+  <div class="sakura-falling"></div>
 <div class="flipbook-viewport">
 	<div class="container">
 		<div class="flipbook">
@@ -18,7 +18,8 @@
 	</div>
 </div>
 
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
 <script type="text/javascript">
 
 function loadApp() {
@@ -58,6 +59,12 @@ yepnope({
 	both: ['css/basic.css'],
 	complete: loadApp
 });
+
+
+(function ($) {
+    "use strict";
+      $('.sakura-falling').sakura();
+})(jQuery);
 
 </script>
 
