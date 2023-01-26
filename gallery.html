@@ -5,6 +5,7 @@
     <link type="text/css" rel="stylesheet" media="screen" href="css/jquery-sakura.min.css" />
     <script type="text/javascript" src="./js/jquery.min.1.7.js"></script>
     <script type="text/javascript" src="./js/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
     <style>
     img {
       max-width: 100%;
@@ -118,6 +119,10 @@ yepnope({
 
 $(function() {
         $('body').sakura();
+
+        document.querySelector("body").addEventListener("click", function (e) {
+    party.confetti(this);
+});
     });
 
 </script>
