@@ -116,13 +116,14 @@ yepnope({
 	complete: loadApp
 });
 
+document.querySelector("body").addEventListener("click", function (e) {
+party.confetti(this);
+});
 
 $(function() {
         $('body').sakura();
 
-        document.querySelector("body").addEventListener("click", function (e) {
-    party.confetti(this);
-});
+
     });
 
 </script>
