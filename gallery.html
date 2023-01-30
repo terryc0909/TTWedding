@@ -36,13 +36,15 @@
   </head>
 
 <body>
-
+  <div class="music">
+    <audio src="./assets/mp3/song.mp3" id="my_audio" loop="loop"></audio>
+  </div>
   <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
   <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration">
 <div class="flipbook-viewport">
 	<div class="container">
 		<div class="flipbook">
-		  <div style="background-image:url(pages/MainPage.png);background-size: contain;background-position: 100%;""></div>
+		  <div style="background-image:url(pages/MainPage.png);background-size: contain;background-position: 100%;"></div>
 			<div style="background-image:url(pages/NEW_1.jpg);background-size: cover;"></div>
       <div style="background-image:url(pages/NEW_1.jpg);background-size: cover;background-position: 104% 0%;"></div>
       <div style="background-image:url(pages/NEW_2.jpg);background-size: contain;"></div>
@@ -55,21 +57,11 @@
       <div style="background-image:url(pages/NEW_7.jpg);background-size: cover;background-position: 104% 0%"></div>
       <div style="background-image:url(pages/NEW_9.jpg);background-size: contain;"></div>
       <div style="background-image:url(pages/NEW_8.jpg);background-size: contain;"></div>
-      <div style="background-image:url(pages/17.jpeg);background-size: cover;"></div>
-      <div style="background-image:url(pages/17.jpeg);background-size: cover;background-position: 104% 0%;"></div>
-      <div style="background-image:url(pages/19.jpeg);background-size: cover;"></div>
-      <div style="background-image:url(pages/19.jpeg);background-size: cover;background-position: 104% 0%;"></div>
-      <div style="background-image:url(pages/20.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/21.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/22.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/23.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/24.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/25.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/26.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/27.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/28.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/29.jpeg);background-size: contain;"></div>
-      <div style="background-image:url(pages/30.jpeg);background-size: contain;"></div>
+      <div style="background-image:url(pages/NEW_10.jpg);background-size: cover;"></div>
+      <div style="background-image:url(pages/NEW_10.jpg);background-size: cover;background-position: 104% 0%;"></div>
+      <div style="background-image:url(pages/NEW_11.jpg);background-size: contain;"></div>
+      <div style="background-image:url(pages/NEW_12.jpg);background-size: contain;"></div>
+      <div style="background-image:url(pages/NEW_LAST.jpg);background-size: contain;"></div>
 		</div>
 	</div>
 </div>
@@ -122,7 +114,7 @@ party.confetti(this);
 
 $(function() {
         $('body').sakura();
-
+        document.getElementById("my_audio").play();
 
     });
 
